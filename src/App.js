@@ -13,7 +13,7 @@ function App() {
     { id: nanoid(), name: 'Manteau', price: 159.49, promo: true },
     { id: nanoid(), name: 'Pantalon', price: 49.01, promo: false },
     { id: nanoid(), name: 'Chemise', price: 32.62, promo: true },
-    { id: nanoid(), name: 'Robe', price: 58.74, promo: false },
+    { id: nanoid(), name: 'Robe', price: 54528.74, promo: false },
     { id: nanoid(), name: 'Gillet', price: 25, promo: true },
     { id: nanoid(), name: 'Chemise rose bonbon', price: 12.62, promo: true }
   ];

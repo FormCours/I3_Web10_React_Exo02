@@ -15,12 +15,12 @@ const ProductTableHead = (props) => (
 const ProductTableRow = ({ name, price, promo }) => (
     <tr>
         <td>{name}</td>
-        {!promo ? (
-            <td colSpan={2}><DisplayPrice value={price} /></td>
-        ) : (<>
-            <td><DisplayPrice value={price} /></td>
+        <td colSpan={promo ? 1 : 2}>
+            <DisplayPrice value={price} />
+        </td>
+        {promo && (
             <td className={style.promo}>Promo</td>
-        </>)}
+        )}
     </tr>
 );
 

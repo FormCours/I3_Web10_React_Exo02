@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
 const DisplayPrice = (props) => {
-    const {value} = props;
+
+    const price = new Intl.NumberFormat('fr-BE', { style: 'currency', currency: 'EUR' })
+                          .format(props.value)
 
     return (
-        <span>{value}</span>
+        <span>{price}</span>
     );
 };
 
