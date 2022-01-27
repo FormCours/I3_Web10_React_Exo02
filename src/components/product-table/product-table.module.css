@@ -1,0 +1,26 @@
+table.tableProduct, table.tableProduct th, table.tableProduct td {
+    margin: 10px;
+    border: 2px solid darkcyan;
+    border-collapse: collapse;
+}
+
+table.tableProduct thead {
+    background-color: darkcyan;
+    color: #f2f5f8;
+}
+
+table.tableProduct th {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+table.tableProduct td {
+    min-width: 75px;
+}
+
+.promo {
+    font-weight: bold;
+    color: violet;
+}

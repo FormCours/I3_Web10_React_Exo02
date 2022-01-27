@@ -1,3 +1,6 @@
+import DisplayPrice from '../display-price/display-price';
+import style from './product-table.module.css';
+
 // Composant (↓ Simple / Sans code) sous forme de lambda qui envoie le JSX
 const ProductTableHead = (props) => (
     <thead>
@@ -12,8 +15,12 @@ const ProductTableHead = (props) => (
 const ProductTableRow = ({ name, price, promo }) => (
     <tr>
         <td>{name}</td>
-        <td>{price}</td>
-        <td>{promo ? 'Promo' : ''}</td>
+        {!promo ? (
+            <td colSpan={2}><DisplayPrice value={price} /></td>
+        ) : (<>
+            <td><DisplayPrice value={price} /></td>
+            <td className={style.promo}>Promo</td>
+        </>)}
     </tr>
 );
 
@@ -25,7 +32,7 @@ const ProductTable = (props) => {
     );
 
     return (
-        <table>
+        <table className={style.tableProduct}>
             <ProductTableHead />
             <tbody>
                 {productsJSX}
